@@ -1,0 +1,54 @@
+//const { json } = require('stream/consumers');
+//JSON->string->json object
+//const dataset = JSON.parse(JSON.stringify(require("../utils/LoginTestData.Json")))
+//for(const data of dataset){} -> to execute if we have multiple data ser
+//test(`loginPagecorrectcradential for ${data.username}`,async({page})=>
+//test cases will be written here.
+//javascript is asycronious. All the test case scrpit to excute parally
+//After every step write awite - to exection complete evey step 
+//mark function as async to awite activated 
+//aynonomous function (function which doesn't have any name) is can be writen as ()=>
+// aysnc ({browser}) -> this are the known fixturs for playwright 
+// What is context -> need to run you test in chrome browser, need to open a new browser
+// we can open browser with plugin and cookies
+//test.only () -> to run particular test
+// const context = await browser.newContext();
+    //const page = await context.newPage();
+
+    //await expect(page).toHaveTitle("Auth | Nextiva");
+   // always go with CSS selector
+   //CSS 
+   // If id is present -> CSS-> tagname#id (or) #id
+   // if class attribute is present -> tagname.class (or) .class
+   // Write Css based on any attribute -> [attribute='value']
+   //Write Css traversion form Parent to child -> css->parenttagname ->childtagname
+   // Write locator based on text -> text=''
+
+
+   //const onboard = poManger.getOnboarding();
+   //await onboard.AddWorkspace();
+   //Wait for Network tab to become idle ->awit page.waitForLoadState("networkidle");
+   //altrenative 
+   // awit page.locator("").first().waitFor();
+   // await page.locator("").last().waitFor();   
+   //Assertion -> await expect( page.locator("").first()).toBeChecked());
+   // check the Checkbox-> await expect( page.locator("")).toBeChecked();
+   //Assertion for checkboxchecked -> expect (await expect( page.locator("")).isCheck().toBetruthy();
+   //Uncheck the checkbox -> await expect( page.locator("")).uncheck();
+   //Assertion for uncheck -> expect (await expect( page.locator("")).isCheck().toBeFalsy();
+
+//---> Element present in DOM
+//await expect(documentLink).toHaveAttribute("class","text");
+// plugin exceljs to read/write excled data and style to  XLSX and Json 
+
+// const invtepagetxt = true;
+    // Your test result
+   //expect(invtepagetxt).toBeTruthy();
+   //console.log(invtepagetxt);
+//What are fixture -> aysnc {page}, aysnc {browser}
+// exports is user to get accessable tp other test 
+ //testdataforLogin -> is a fixture 
+    //testdataforLogin -> is a property of test
+
+   // npx playwright test tests/TestSuit.spec.js  --headed
+   npx playwright test --ui
