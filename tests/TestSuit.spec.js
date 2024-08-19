@@ -54,7 +54,7 @@ customtest(`LoginPageincorrectcradential`,async({page,testdataforinvalidLogin})=
    
   })
   
-   customtest.only('User Settings',async({page,testdataforLogin})=>
+   customtest('User Settings',async({page,testdataforLogin})=>
     {
        const poManger = new POManager(page);
        console.log(await page.title());
