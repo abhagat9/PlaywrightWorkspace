@@ -64,5 +64,3 @@ customtest(`LoginPageincorrectcradential`,async({page,testdataforinvalidLogin})=
        const setting =poManger.getSetting();
        await setting.User();
     });
-
- 
